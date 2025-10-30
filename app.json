@@ -1,0 +1,96 @@
+{
+  "name": "Telegram File Selling Bot",
+  "description": "A Telegram File Selling Bot with Auto Razorpay Payment Verification, OTP Reader, File Delivery, and S3 Integration.",
+  "repository": "https://github.com/yourusername/fileshop-bot",
+  "stack": "heroku-22",
+  "keywords": ["telegram", "bot", "file-selling", "razorpay", "upi", "otp", "auto-verification"],
+  "env": {
+    "API_ID": {
+      "description": "Telegram API ID (from https://my.telegram.org)",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Telegram API Hash (from https://my.telegram.org)",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Bot token from @BotFather",
+      "required": true
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB connection URI for storing users, orders, and files.",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Telegram user ID of the bot owner/admin.",
+      "required": true
+    },
+    "LOG_GROUP_ID": {
+      "description": "Telegram group/channel ID for logs (optional but recommended).",
+      "value": "-1001234567890",
+      "required": false
+    },
+    "SUPPORT_GROUP_LINK": {
+      "description": "Telegram support group or channel link (optional).",
+      "value": "https://t.me/your_support_group",
+      "required": false
+    },
+    "RAZORPAY_KEY_ID": {
+      "description": "Your Razorpay API Key ID.",
+      "required": true
+    },
+    "RAZORPAY_KEY_SECRET": {
+      "description": "Your Razorpay API Secret Key.",
+      "required": true
+    },
+    "RAZORPAY_WEBHOOK_SECRET": {
+      "description": "Your Razorpay Webhook Secret (for auto payment verification).",
+      "required": true
+    },
+    "S3_ENDPOINT": {
+      "description": "S3 or DigitalOcean Spaces endpoint (optional).",
+      "value": "",
+      "required": false
+    },
+    "S3_KEY": {
+      "description": "S3 access key (optional).",
+      "value": "",
+      "required": false
+    },
+    "S3_SECRET": {
+      "description": "S3 secret key (optional).",
+      "value": "",
+      "required": false
+    },
+    "S3_BUCKET": {
+      "description": "S3 bucket name (optional).",
+      "value": "",
+      "required": false
+    },
+    "S3_REGION": {
+      "description": "S3 region name (e.g., ap-south-1).",
+      "value": "ap-south-1",
+      "required": false
+    },
+    "PORT": {
+      "description": "Port for webhook or FastAPI (Heroku default is 8000).",
+      "value": "8000",
+      "required": false
+    },
+    "SESSION_FOLDER": {
+      "description": "Folder to store OTP sessions (for number login).",
+      "value": "./sessions",
+      "required": false
+    },
+    "FILES_TEMP": {
+      "description": "Temporary folder to store uploaded files.",
+      "value": "/tmp/fileshop",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
