@@ -2,7 +2,8 @@ pyrogram==2.0.106
 tgcrypto
 fastapi
 uvicorn[standard]
-motor==3.7.1
+motor
+pymongo
 python-dotenv
 razorpay
 pillow
