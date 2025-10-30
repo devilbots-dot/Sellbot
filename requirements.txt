@@ -13,4 +13,3 @@ qrcode
 cryptography
 boto3
 dnspython
-bson
