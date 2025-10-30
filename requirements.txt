@@ -2,7 +2,7 @@ pyrogram==2.0.106
 tgcrypto
 fastapi
 uvicorn[standard]
-motor
+pymongo
 python-dotenv
 razorpay
 pillow
@@ -12,4 +12,4 @@ qrcode
 cryptography
 boto3
 dnspython
-python-bson
+bson
