@@ -1,0 +1,15 @@
+pyrogram==2.0.106
+tgcrypto
+fastapi
+uvicorn[standard]
+motor
+python-dotenv
+razorpay
+pillow
+aiohttp
+python-multipart
+qrcode
+cryptography
+boto3
+dnspython
+python-bson
